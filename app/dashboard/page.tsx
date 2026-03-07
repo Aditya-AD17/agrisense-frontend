@@ -1,38 +1,58 @@
+import DashboardWidget from "@/components/ui/DashboardWidget"
+import DiseaseChart from "@/components/charts/DiseaseChart"
+
 export default function DashboardPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-10">
 
-      <h1 className="text-3xl font-bold text-gray-800">
+      <h1 className="text-3xl font-bold text-green-900">
         Farmer Dashboard
       </h1>
 
-      <div className="grid grid-cols-3 gap-6">
+      {/* SUMMARY WIDGETS */}
 
-        <div className="bg-white shadow rounded-xl p-6">
-          <h2 className="font-semibold text-lg">
-            Recent Disease Predictions
-          </h2>
-          <p className="text-gray-500 mt-2">
-            Your previous crop disease analyses will appear here.
-          </p>
-        </div>
+      <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white shadow rounded-xl p-6">
-          <h2 className="font-semibold text-lg">
-            Recommended Schemes
-          </h2>
-          <p className="text-gray-500 mt-2">
-            Government schemes suited for your crops.
-          </p>
-        </div>
+        <DashboardWidget
+          title="Diseases Detected"
+          value="120"
+          icon="🌿"
+        />
 
-        <div className="bg-white shadow rounded-xl p-6">
-          <h2 className="font-semibold text-lg">
-            Crop Health Insights
-          </h2>
-          <p className="text-gray-500 mt-2">
-            AI generated crop insights.
-          </p>
+        <DashboardWidget
+          title="Healthy Crops"
+          value="86%"
+          icon="✅"
+        />
+
+        <DashboardWidget
+          title="Recommended Schemes"
+          value="4"
+          icon="🏛"
+        />
+
+      </div>
+
+      {/* ANALYTICS */}
+
+      <div className="grid lg:grid-cols-2 gap-8">
+
+        <DiseaseChart />
+
+        <div className="bg-white p-6 rounded-2xl shadow">
+
+          <h3 className="font-semibold mb-4">
+            Recent AI Predictions
+          </h3>
+
+          <ul className="space-y-3 text-gray-600">
+
+            <li>🌾 Wheat Leaf Blight detected</li>
+            <li>🌾 Tomato Rust detected</li>
+            <li>🌾 Rice Bacterial Spot detected</li>
+
+          </ul>
+
         </div>
 
       </div>

@@ -5,10 +5,16 @@ import ImageUploader from "@/components/forms/ImageUploader"
 import ResultCard from "@/components/ui/ResultCard"
 import { predictDisease } from "@/services/diseaseService"
 
+type PredictionResult = {
+  disease: string
+  confidence: number
+  remedy: string
+}
+
 export default function DetectionPage() {
 
   const [file, setFile] = useState<File | null>(null)
-  const [result, setResult] = useState<any>(null)
+  const [result, setResult] = useState<PredictionResult | null>(null)
   const [loading, setLoading] = useState(false)
 
   const handleUpload = (file: File) => {
