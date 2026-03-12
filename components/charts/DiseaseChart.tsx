@@ -37,15 +37,10 @@ export default function DiseaseChart() {
       </h3>
 
       <ResponsiveContainer width="100%" height={260}>
-
         <BarChart data={data}>
-
           <CartesianGrid strokeDasharray="3 3" />
-
           <XAxis dataKey="name" />
-
           <YAxis />
-
           <Tooltip
             contentStyle={{
               borderRadius: "8px",
@@ -60,15 +55,13 @@ export default function DiseaseChart() {
             animationDuration={1200}
           />
           <defs>
-  <linearGradient id="gaugeGradient" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stopColor="#22c55e" />
-    <stop offset="100%" stopColor="#15803d" />
-  </linearGradient>
-</defs>
+            <linearGradient id="gaugeGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#22c55e" />
+              <stop offset="100%" stopColor="#15803d" />
+            </linearGradient>
+          </defs>
         </BarChart>
-
       </ResponsiveContainer>
-
     </div>
   )
 }

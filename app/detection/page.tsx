@@ -3,6 +3,7 @@
 import { useState } from "react"
 import ImageUploader from "@/components/forms/ImageUploader"
 import ResultCard from "@/components/ui/ResultCard"
+import Skeleton from "@/components/ui/Skeleton"
 import { predictDisease } from "@/services/diseaseService"
 
 type PredictionResult = {
@@ -63,13 +64,15 @@ export default function DetectionPage() {
       )}
 
       {loading && (
-  <div className="flex items-center gap-3 text-gray-600">
+  <div className="bg-white p-6 rounded-xl shadow space-y-3">
 
-    <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce"></div>
-    <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce delay-150"></div>
-    <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce delay-300"></div>
+    <Skeleton className="h-6 w-40" />
 
-    <span>AI analyzing crop health...</span>
+    <Skeleton className="h-4 w-full" />
+
+    <Skeleton className="h-4 w-3/4" />
+
+    <Skeleton className="h-4 w-1/2" />
 
   </div>
 )}

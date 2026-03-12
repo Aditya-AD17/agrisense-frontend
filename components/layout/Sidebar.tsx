@@ -3,10 +3,11 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
+  BarChart3,
+  Info,
+  Landmark,
   LayoutDashboard,
   Microscope,
-  Landmark,
-  BarChart3,
 } from "lucide-react"
 
 const links = [
@@ -30,6 +31,11 @@ const links = [
     href: "/analytics",
     icon: BarChart3,
   },
+  {
+    name: "About",
+    href: "/about",
+    icon: Info,
+  },
 ]
 
 export default function Sidebar() {
@@ -37,17 +43,15 @@ export default function Sidebar() {
 
   return (
     <aside className="flex h-screen w-64 flex-col bg-green-900 p-6 text-white">
-      <div className="flex items-center gap-3 mb-10 hover:scale-105 transition">
+      <Link href="/">
+        <div className="mb-10 flex cursor-pointer items-center gap-3 transition hover:scale-105">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-700 text-sm font-bold">
+            🌱
+          </div>
 
-  <div className="bg-green-700 rounded-full h-10 w-10 flex items-center justify-center">
-    🌱
-  </div>
-
-  <span className="text-2xl font-bold">
-    AgriSense
-  </span>
-
-</div>
+          <span className="text-2xl font-bold tracking-wide">AgriSense</span>
+        </div>
+      </Link>
 
       <nav className="space-y-3">
         {links.map((link) => {

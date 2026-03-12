@@ -1,28 +1,43 @@
+import Skeleton from "./Skeleton"
+
 interface Props {
-  title: string
-  value: string
-  icon: string
+  title?: string
+  value?: string
+  icon?: string
+  loading?: boolean
 }
 
-export default function DashboardWidget({ title, value, icon }: Props) {
+export default function DashboardWidget({
+  title,
+  value,
+  icon,
+  loading,
+}: Props) {
+
+  if (loading) {
+    return (
+      <div className="bg-white p-6 rounded-2xl shadow">
+        <Skeleton className="h-6 w-10 mb-3" />
+        <Skeleton className="h-4 w-24" />
+      </div>
+    )
+  }
+
   return (
     <div
-  className="
-  bg-white
-  p-6
-  rounded-2xl
-  shadow-md
-  hover:shadow-2xl
-  hover:-translate-y-2
-  hover:scale-[1.02]
-  transition-all
-  duration-300
-  flex
-  items-center
-  gap-4
-  cursor-pointer
-  "
->
+      className="
+      bg-white
+      p-6
+      rounded-2xl
+      shadow-md
+      hover:shadow-xl
+      hover:-translate-y-2
+      transition
+      flex
+      items-center
+      gap-4
+      "
+    >
       <div className="text-3xl">{icon}</div>
 
       <div>
