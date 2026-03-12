@@ -55,14 +55,14 @@ export default function DiseaseChart() {
 
           <Bar
             dataKey="cases"
-            fill="url(#colorGradient)"
+            fill="url(#gaugeGradient)"
             radius={[6, 6, 0, 0]}
             animationDuration={1200}
           />
           <defs>
-  <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stopColor="#22c55e" stopOpacity={1}/>
-    <stop offset="100%" stopColor="#15803d" stopOpacity={1}/>
+  <linearGradient id="gaugeGradient" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stopColor="#22c55e" />
+    <stop offset="100%" stopColor="#15803d" />
   </linearGradient>
 </defs>
         </BarChart>

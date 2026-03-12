@@ -1,5 +1,6 @@
 import DashboardWidget from "@/components/ui/DashboardWidget"
 import DiseaseChart from "@/components/charts/DiseaseChart"
+import ConfidenceGauge from "@/components/charts/ConfidenceGauge"
 
 export default function DashboardPage() {
   return (
@@ -34,9 +35,11 @@ export default function DashboardPage() {
 
       {/* ANALYTICS */}
 
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-3 gap-8">
 
         <DiseaseChart />
+
+        <ConfidenceGauge />
 
         <div className="className=
 bg-white
