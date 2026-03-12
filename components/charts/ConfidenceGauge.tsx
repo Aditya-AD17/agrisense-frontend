@@ -46,7 +46,6 @@ export default function ConfidenceGauge() {
           >
 
             <RadialBar
-              minAngle={15}
               dataKey="value"
               cornerRadius={10}
               fill="#16a34a"

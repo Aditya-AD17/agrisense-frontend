@@ -37,9 +37,17 @@ export default function Sidebar() {
 
   return (
     <aside className="flex h-screen w-64 flex-col bg-green-900 p-6 text-white">
-      <h2 className="mb-10 text-2xl font-bold">
-        {"\u{1F331}"} AgriSense
-      </h2>
+      <div className="flex items-center gap-3 mb-10 hover:scale-105 transition">
+
+  <div className="bg-green-700 rounded-full h-10 w-10 flex items-center justify-center">
+    🌱
+  </div>
+
+  <span className="text-2xl font-bold">
+    AgriSense
+  </span>
+
+</div>
 
       <nav className="space-y-3">
         {links.map((link) => {
