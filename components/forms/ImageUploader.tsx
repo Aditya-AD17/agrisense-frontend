@@ -46,7 +46,7 @@ export default function ImageUploader({ onUpload }: Props) {
 
           <div className="text-5xl">🌿</div>
 
-          <p className="text-gray-600 font-medium">
+          <p className="text-orange-600 font-medium">
             Drag & Drop Crop Leaf Image
           </p>
 

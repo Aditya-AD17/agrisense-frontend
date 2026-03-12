@@ -26,7 +26,7 @@ export default function SchemesPage() {
   return (
     <div className="max-w-6xl mx-auto space-y-8">
 
-      <h1 className="text-3xl font-bold text-gray-800">
+      <h1 className="text-3xl font-bold text-emerald-700">
         Government Schemes for Farmers
       </h1>
 
@@ -52,11 +52,11 @@ export default function SchemesPage() {
       {/* SCHEME LIST */}
       <div className="text-center">
 
-  <h1 className="text-4xl font-bold text-green-900">
+  <h1 className="text-3xl font-bold text-yellow-600">
     Government Schemes
   </h1>
 
-  <p className="text-gray-600 mt-3">
+  <p className="text-orange-600 mt-3">
     Access agricultural support programs and subsidies
   </p>
 

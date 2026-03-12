@@ -1,5 +1,6 @@
 import Counter from "@/components/ui/Counter"
 import FeatureCard from "@/components/ui/FeatureCard"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -36,9 +37,11 @@ export default function Home() {
       using artificial intelligence.
     </p>
 
-    <button className="mt-8 bg-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition">
-      Detect Disease
-    </button>
+    <Link href="/detection">
+      <button className="mt-8 bg-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition">
+        Detect Disease
+      </button>
+    </Link>
 
     {/* COUNTERS */}
 
@@ -80,6 +83,7 @@ export default function Home() {
             title="Disease Detection"
             description="Upload crop images and get instant AI-powered disease diagnosis."
             action="Try Now →"
+            href="/detection"
           />
 
           <FeatureCard
@@ -94,6 +98,7 @@ export default function Home() {
             title="Government Schemes"
             description="Discover Indian agricultural subsidies and farmer schemes."
             action="Explore Schemes →"
+            href="/schemes"
           />
 
         </div>

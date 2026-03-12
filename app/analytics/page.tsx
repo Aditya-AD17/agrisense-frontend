@@ -2,7 +2,7 @@ export default function AnalyticsPage() {
   return (
     <div className="space-y-6">
 
-      <h1 className="text-3xl font-bold text-gray-800">
+      <h1 className="text-3xl font-bold text-emerald-700">
         Crop Analytics
       </h1>
 

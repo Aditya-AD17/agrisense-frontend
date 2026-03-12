@@ -37,7 +37,7 @@ export default function DetectionPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
 
-      <h1 className="text-3xl font-bold text-gray-800">
+      <h1 className="text-3xl font-bold text-emerald-700">
         Crop Disease Detection
       </h1>
 

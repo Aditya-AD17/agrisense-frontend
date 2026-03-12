@@ -20,9 +20,9 @@ export default function DiseaseChart() {
   return (
     <div className="bg-white p-6 rounded-2xl shadow">
 
-      <h3 className="font-semibold mb-4">
-        Most Detected Crop Diseases
-      </h3>
+      <h3 className="text-green-900 font-semibold text-lg mb-4">
+  Most Detected Crop Diseases
+</h3>
 
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={data}>

@@ -1,8 +1,11 @@
+import Link from "next/link"
+
 interface Props {
   icon: string
   title: string
   description: string
   action: string
+  href?: string
 }
 
 export default function FeatureCard({
@@ -10,8 +13,9 @@ export default function FeatureCard({
   title,
   description,
   action,
+  href,
 }: Props) {
-  return (
+  const content = (
     <div className="group bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 text-center cursor-pointer">
 
       <div className="w-16 h-16 bg-green-700 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6 group-hover:scale-110 transition">
@@ -32,4 +36,6 @@ export default function FeatureCard({
 
     </div>
   )
+
+  return href ? <Link href={href}>{content}</Link> : content
 }

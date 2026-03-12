@@ -5,7 +5,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-10">
 
-      <h1 className="text-3xl font-bold text-green-900">
+      <h1 className="text-3xl font-bold text-emerald-700">
         Farmer Dashboard
       </h1>
 
@@ -41,9 +41,9 @@ export default function DashboardPage() {
 
         <div className="bg-white p-6 rounded-2xl shadow">
 
-          <h3 className="font-semibold mb-4">
-            Recent AI Predictions
-          </h3>
+          <h3 className="font-semibold text-green-900 text-lg mb-4">
+  Recent AI Predictions
+</h3>
 
           <ul className="space-y-3 text-gray-600">
 
