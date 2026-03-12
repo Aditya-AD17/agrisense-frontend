@@ -36,14 +36,12 @@ export default function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="h-screen w-64 bg-green-900 text-white p-6 flex flex-col">
-
-      <h2 className="text-2xl font-bold mb-10">
-        🌱 AgriSense
+    <aside className="flex h-screen w-64 flex-col bg-green-900 p-6 text-white">
+      <h2 className="mb-10 text-2xl font-bold">
+        {"\u{1F331}"} AgriSense
       </h2>
 
       <nav className="space-y-3">
-
         {links.map((link) => {
           const Icon = link.icon
           const active = pathname === link.href
@@ -53,11 +51,11 @@ export default function Sidebar() {
               key={link.href}
               href={link.href}
               className={`
-                flex items-center gap-3 px-4 py-3 rounded-lg transition
+                flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-200
                 ${
                   active
-                    ? "bg-green-700"
-                    : "hover:bg-green-800"
+                    ? "bg-green-700 shadow-lg"
+                    : "hover:bg-green-800 hover:translate-x-1"
                 }
               `}
             >
@@ -66,9 +64,7 @@ export default function Sidebar() {
             </Link>
           )
         })}
-
       </nav>
-
     </aside>
   )
 }

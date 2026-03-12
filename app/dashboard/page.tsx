@@ -11,8 +11,7 @@ export default function DashboardPage() {
 
       {/* SUMMARY WIDGETS */}
 
-      <div className="grid md:grid-cols-3 gap-6">
-
+       <div className="grid md:grid-cols-3 gap-6 group">
         <DashboardWidget
           title="Diseases Detected"
           value="120"
@@ -39,7 +38,16 @@ export default function DashboardPage() {
 
         <DiseaseChart />
 
-        <div className="bg-white p-6 rounded-2xl shadow">
+        <div className="className=
+bg-white
+p-6
+rounded-xl
+shadow-md
+hover:shadow-xl
+hover:-translate-y-1
+transition
+duration-300
+">
 
           <h3 className="font-semibold text-green-900 text-lg mb-4">
   Recent AI Predictions
