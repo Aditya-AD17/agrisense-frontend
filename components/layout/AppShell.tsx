@@ -13,16 +13,22 @@ export default function AppShell({
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <body className="min-h-screen bg-gray-100 text-gray-900 md:flex">
+    <div className="flex min-h-screen bg-gray-100 text-gray-900">
+
+      {/* Sidebar */}
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      <div className="flex min-h-screen flex-1 flex-col md:min-w-0">
+      {/* Main Content */}
+      <div className="flex flex-1 flex-col">
+
         <Navbar onMenuClick={() => setSidebarOpen(true)} />
 
         <main className="flex-1 px-4 py-6 sm:px-6 md:p-8">
           <PageTransition>{children}</PageTransition>
         </main>
+
       </div>
-    </body>
+
+    </div>
   )
 }
